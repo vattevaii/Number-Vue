@@ -1,0 +1,1 @@
+#Simple one page vue only
