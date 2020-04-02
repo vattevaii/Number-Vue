@@ -1,0 +1,122 @@
+body{ margin:0;}
+#game {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to bottom left, #0004ff, #d300ff);
+}
+
+.center-box {
+  min-width: 1000px;
+  width:1024px;
+  min-height: 500px;
+  overflow: hidden;
+  background-image: linear-gradient(to top right, #bc00ff47, rgba(35, 73, 188, 0.45));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.center-box .h1 {
+  color: #c13fbf;
+  font-size: 39px;
+  line-height: 60px;
+  margin:0;
+  font-variant: small-caps;
+  font-weight: bolder;
+}
+
+.center-box > .header {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  overflow:hidden;
+  justify-content: center;
+  align-content: center;
+  background-image: linear-gradient(to left bottom,#0000002e,#0064ff5c);
+}
+.center-box > .content {
+  flex:1;
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-content:center;
+  justify-content: center;
+  flex-direction: column;
+}
+.center-box > .content > .question{
+    display: block;
+    font-size: 35px;
+    color:black;
+    margin:30px;
+    align-self: center;
+}
+.center-box > .content > .check-answers{
+    font-size: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.center-box > .content > .check-answers > * {
+    align-self: center;
+    flex: 1;
+    max-width: 400px;
+    min-width: 350px;
+    height:60px;
+    display: flex;
+    justify-content: center;
+    line-height: 60px;
+    margin: 33px 0 33px 0;
+    border: #0004 8px;
+    border-radius: 30px;
+    border-color: #7bf3180f;
+    cursor: pointer;
+    transition: background-color .5s ease-in-out;
+    background-image: linear-gradient(#0000,#236f68);
+    background-color: #12798463;
+}
+.center-box > .content > .check-answers > .active {
+    background-color: red;
+}
+.center-box > .content > .check-answers > .active.true{
+    background-color: green;
+} 
+
+.next{ 
+    font-size: 30px;
+    color: lawngreen;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+.next:hover{
+    color: #d5cadf;
+}
+@media only screen and (max-width: 1000px) {
+    .center-box {
+       min-width: 800px;
+      max-width: 800px;
+      background-image: linear-gradient(to top right,#9701ffb5,#3800ffb0);
+    }
+    .center-box > .content > .check-answers > *{
+        max-width: 300px;
+    }
+  }
+
+
+@media only screen and (max-width: 800px) {
+    .center-box {
+      min-width: 100vw;
+      min-height: 80vh;
+      max-height: 100vh;
+      background-image: linear-gradient(to top right,#00000000,#3800ffb0);
+    }
+    .center-box > .content > .check-answers > * {
+        min-width: 200px;
+        height:50px;
+        line-height: 50px;
+        margin: 10px;
+    }
+  }
